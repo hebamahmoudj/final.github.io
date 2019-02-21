@@ -1,0 +1,5 @@
+python -m http.server 8000
+http://localhost:8000
+
+ git config --global core.editor "'C:\Program Files\Sublime Text 3/sublime_text.exe' -n -w"
+
