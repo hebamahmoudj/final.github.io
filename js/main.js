@@ -1,63 +1,10 @@
-// if('serviceWorker' in navigator)  {
-// document.addEventListener('load', () => {
-//   navigator.serviceWorker.register('../sw.js').then(reg => console.log('serviceWorker is Registered')).
-//   catch(err => console.log('serviceWorker not Regisered and have error: ${err}'))
-// })
 
-
-// }
 if('serviceWorker' in navigator){
-   navigator.serviceWorker.register('/sw.js').then(function(){
-  // navigator.serviceWorker.register('/sw.js').then(function(){
-    console.log("Now Service Worker is: Registered");
-  });
+  window.addEventListener('load', () => {
+   navigator.serviceWorker.register('/service.js').then(register => console.log("Now Service Worker is: Registered"))
+   .catch(error => console.log(`service worker has an error  ${error}`));
+    });
 }
-
-// if ('serviceWorker' in navigator) {
-//   // Register a service worker hosted at the root of the
-//   // site using the default scope.
-//   navigator.serviceWorker.register('/sw.js').then(function(registration) {
-//     console.log('Service worker registration succeeded:', registration);
-//   }, /*catch*/ function(error) {
-//     console.log('Service worker registration failed:', error);
-//   });
-// } else {
-//   console.log('Service workers are not supported.');
-// }
-
-// if ('serviceWorker' in navigator) {
-//   navigator.serviceWorker.register('/sw.js')
-//   .then(function(registration) {
-//     registration.addEventListener('updatefound', function() {
-//       // If updatefound is fired, it means that there's
-//       // a new service worker being installed.
-//       var installingWorker = registration.installing;
-//       console.log('A new service worker is being installed:',
-//         installingWorker);
-
-//       // You can listen for changes to the installing service worker's
-//       // state via installingWorker.onstatechange
-//     });
-//   })
-//   .catch(function(error) {
-//     console.log('Service worker registration failed:', error);
-//   });
-// } else {
-//   console.log('Service workers are not supported.');
-// }
-
-
-// if ('serviceWorker' in navigator) {
-//   // Register a service worker hosted at the root of the
-//   // site using the default scope.
-//   navigator.serviceWorker.register('/sw.js').then(function(registration) {
-//     console.log('Service worker registration succeeded:', registration);
-//   }, /*catch*/ function(error) {
-//     console.log('Service worker registration failed:', error);
-//   });
-// } else {
-//   console.log('Service workers are not supported.');
-// }
 let restaurants,
   neighborhoods,
   cuisines
